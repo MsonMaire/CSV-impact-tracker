@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSR Tracker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://scontent.fnbo6-1.fna.fbcdn.net/v/t39.30808-6/326209379_1483203409166838_9141176388678785239_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=OefhDQIEXoQQ7kNvwGis99R&_nc_oc=Adla7YDrOHfgkPQBwBTuS9OYOWQAUVJB3GyrpbC7oTNo2LJVJLC4J7i-FciKQsDu4cw&_nc_zt=23&_nc_ht=scontent.fnbo6-1.fna&_nc_gid=MRHzEMp5Ull3fadoj__6Gw&oh=00_AfIPUI4RWEltF_V8HtcTMiHBmgekxta1SDPYCMr0RO9R_Q&oe=682AF356') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 900px;
+      width: 100%;
+      backdrop-filter: blur(4px);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .cta-button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #005baa;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #003e7e;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      width: 220px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .dashboard-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 2rem 0;
+    }
+
+    .dashboard {
+      background: rgba(245, 250, 255, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+      color: #003e7e;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard .section-title {
+      color: #005baa;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .dashboard-section {
+      margin: 1rem 0;
+    }
+
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #0072ce;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    }
+
+    .counter-label {
+      font-size: 1rem;
+      margin-top: 0.25rem;
+      color: #003e7e;
+    }
+
+    .developer {
+      text-align: center;
+      max-width: 700px;
+      margin: 2rem auto;
+      color: #e0e0e0;
+    }
+
+    .developer h3 {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #ffffff;
+    }
+
+    .footer-buttons button {
+      padding: 0.6rem 1.2rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      border: 1px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content, .dashboard, .card, .developer, footer {
+      animation: fadeIn 0.7s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+
+    <header>
+      <h1>CSR Platform</h1>
+      <p>From One Bar of Soap, One Piece of Linen, One Line of Code... <strong>Africa Builds, Together We Can!</strong></p>
+      <p>Innovating hygiene solutions for healthier communities—with shared purpose, African spirit, and collective action.</p>
+      <button class="cta-button" onclick="scrollToDashboard()">Start Tracking Impact</button>
+    </header>
+
+    <section>
+      <h2 class="section-title">What We Do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🧼 Soap for Hope Tracker</h3>
+          <p>Monitor recycled soap collected, reprocessed, and donated.</p>
+        </div>
+        <div class="card">
+          <h3>🧺 Linen for Life Tracker</h3>
+          <p>Track upcycled linen – uniforms, bags, essentials.</p>
+        </div>
+        <div class="card">
+          <h3>🌿 Smart Cleaning Insights</h3>
+          <p>See how sustainable cleaning innovations save water and boost health.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="dashboard-wrapper">
+      <div class="dashboard" id="dashboard">
+        <h2 class="section-title">Live Impact Dashboard</h2>
+
+        <div class="dashboard-section">
+          <div class="counter" id="soapCount">0</div>
+          <div class="counter-label">Soap Recycled (kg)</div>
+        </div>
+
+        <div class="dashboard-section">
+          <div class="counter" id="livesCount">0</div>
+          <div class="counter-label">Lives Impacted</div>
+        </div>
+
+        <div class="dashboard-section">
+          <div class="counter" id="schoolsCount">0</div>
+          <div class="counter-label">Communities Reached</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h3>Africa Unites!</h3>
+      <p>Clean hands, Clean hearts, Clean life!</p>
+      <div class="footer-buttons">
+        <button>Join the Movement</button>
+        <button>Partner With Us</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function scrollToDashboard() {
+      document.getElementById('dashboard').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function animateCounter(id, target, duration) {
+      const element = document.getElementById(id);
+      let start = 0;
+      const stepTime = Math.abs(Math.floor(duration / target));
+      const timer = setInterval(() => {
+        start += 1;
+        element.textContent = start.toLocaleString();
+        if (start >= target) clearInterval(timer);
+      }, stepTime);
+    }
+
+    window.onload = () => {
+      animateCounter('soapCount', 2400, 1500);
+      animateCounter('livesCount', 1850, 1500);
+      animateCounter('schoolsCount', 32, 1000);
+    };
+  </script>
+</body>
+</html>
