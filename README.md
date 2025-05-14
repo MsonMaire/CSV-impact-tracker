@@ -6,7 +6,7 @@
 ---
 
 ## 🚀 Live Demo
-👉 [Explore the Live CSR Tracker](https://msonmaire.github.io/csr-impact-tracker/)
+👉 [Explore the Live CSR Tracker](https://github.com/MsonMaire/CSV-impact-tracker/blob/main/Index.html)
 
 ---
 
