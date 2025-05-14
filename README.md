@@ -76,7 +76,7 @@ Optimized for tablets, phones, and desktops — making impact tracking accessibl
 ## 📧 Contact & Contribution
 
 Questions, feedback, or partnership ideas?  
-📩 **Email:** msonatech@proton.me 
+📩 **Email:** msonatechva@proton.me 
 
 ---
 
