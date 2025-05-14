@@ -69,7 +69,7 @@ Optimized for tablets, phones, and desktops — making impact tracking accessibl
 
 ## 🖼️ Screenshot
 
-![Live Demo Screenshot](./screenshot.png)
+![Live Demo Screenshot](https://github.com/MsonMaire/CSV-impact-tracker/blob/main/Page_Screenshot.JPG)
 
 ---
 
