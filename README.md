@@ -49,6 +49,7 @@ Watch the real-time counters for:
 - **Hospitality groups** tracking sustainability KPIs  
 - **NGOs** reporting impact to funders in real-time  
 - **Governments** mapping health outcomes across regions
+- **Universities & Institutions** incorporating real-world impact into research and service-learning programs
 
 ---
 
