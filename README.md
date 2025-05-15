@@ -57,7 +57,7 @@ Watch the real-time counters for:
 
 Want to get involved? Take action:
 
-- [Partner with Us](https://forms.gle/your-form-link)  
+- [Partner with Us](https://forms.gle/x9Aanf4erAGqSuBx7)  
 - Track Your Impact (Coming Soon!)
 
 ---
